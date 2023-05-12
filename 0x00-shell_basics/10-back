@@ -1,2 +1,2 @@
-echo #!/bin/bash
-cd "$OLDPWD" 
+#!/bin/bash
+cd "$OLDPWD"
