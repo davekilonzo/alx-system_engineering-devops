@@ -1,9 +1,12 @@
 #!/usr/bin/env bash
-# This script configures an Ubuntu server to resolve localhost and facebook.com to specific IP addresses
+# This script changes the resolution of localhost and facebook.com
 
-# Add entry for localhost
-echo "127.0.0.2 localhost" | sudo tee /etc/hosts
+# Backup the original hosts file
+sudo cp /etc/hosts /etc/hosts.bak
 
-# Add entry for facebook.com
+# Change the resolution of localhost to 127.0.0.2
+echo "127.0.0.2 localhost" | sudo tee -a /etc/hosts
+
+# Change the resolution of facebook.com to 8.8.8.8
 echo "8.8.8.8 facebook.com" | sudo tee -a /etc/hosts
 
