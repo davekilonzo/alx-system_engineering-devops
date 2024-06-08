@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# This script configures an Ubuntu server to resolve localhost and facebook.com to specific IP addresses
+
+# Add entry for localhost
+echo "127.0.0.2 localhost" | sudo tee -a /etc/hosts
+
+# Add entry for facebook.com
+echo "8.8.8.8 facebook.com" | sudo tee -a /etc/hosts
+
